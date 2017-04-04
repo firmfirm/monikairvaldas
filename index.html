@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monika ir Valdas</title>
+    <style>
+      html, body, #container, img {
+        margin: 0;
+        padding: 0;
+      }
+      html, body, #container {
+        width: 100vw;
+        height: 100vh;
+      }
+      #container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      #container > * {
+        width: 100%;
+        flex: 1 1 auto;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      #top {
+        flex-basis: 35%;
+        background-image: url(img/top.png);
+        background-position: bottom;
+      }
+      #mid {
+        flex-basis: 40%;
+        background-image: url(img/mid.png);
+        background-position: center;
+        background-size: contain;
+      }
+      #bottom {
+        flex-basis: 25%;
+        background-image: url(img/bottom.png);
+        background-position: top;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="top"></div>
+      <div id="mid"></div>
+      <div id="bottom"></div>
+    </div>
+  </body>
+</html>
