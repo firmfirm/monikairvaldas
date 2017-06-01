@@ -263,7 +263,7 @@ function geronimo() {
 		this.nextLevel = function() {
 			this.level++;
             console.log("Level "+game.level);
-			game.showMessage("Levelis "+game.level, this.getLevelTitle() + "<br/>(Spausk belenkur!)");
+			game.showMessage(game.level + " levelis", this.getLevelTitle() + "<br/>(Spausk belenkur!)");
 			game.refreshLevel(".level");
 			this.init(1);
 		};
