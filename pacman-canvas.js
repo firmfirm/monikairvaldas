@@ -12,9 +12,12 @@
 
 "use strict";
 
-var MSG_SUCCESS = "Būk pasiruošęs sekantiems išbandymams 2017-06-03 08:15" +
+var MSG_SUCCESS = "Būk pasiruošęs sekantiems išbandymams!" +
 	"<br /><br />" +
-	"Apsirenk patogiai, pasiimk šiltų drabužių";
+	"2017-06-03 08:15" +
+	"<br /><br />" +
+	"Apsirenk patogiai, pasiimk šiltų drabužių" +
+	"<br />";
 
 function geronimo() {
 /* ----- Global Variables ---------------------------------------- */
