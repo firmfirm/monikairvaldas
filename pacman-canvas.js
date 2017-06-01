@@ -12,6 +12,10 @@
 
 "use strict";
 
+var MSG_SUCCESS = "Būk pasiruošęs sekantiems išbandymams 2017-06-03 08:15" +
+	"<br /><br />" +
+	"Apsirenk patogiai, pasiimk šiltų drabužių";
+
 function geronimo() {
 /* ----- Global Variables ---------------------------------------- */
 	var canvas;
@@ -281,31 +285,19 @@ function geronimo() {
 		this.getLevelTitle = function() {
 			switch(this.level) {
 				case 2:
-					return '"Gaudynės prasideda"';
+					return 'Moncė pastebėjo kad prigėrei...';
                     // activate chase / scatter switching
 				case 3:
-					return '"Daugiau Moncių"';
+					return 'Per daug išgėrei - Moncė trejinasi';
                     // Inky starts leaving the ghost house
 				case 4:
-					return '"Dar daugiau Moncių"';
+					return 'Vapšė koma - keturios Moncės';
                     // Clyde starts leaving the ghost house
 				case 5:
-					return '"Greičiau"';
+					return 'Moncės įniršis';
                     // All the ghosts get faster from now on
-                case 6:
-                    return '"Medžioklės pradžia"';
-                    // TODO: No scatter mood this time
-                case 7:
-                    return '"Ramūnas"';
-                    // TODO: Only scatter mood this time
-                case 8:
-                    return '"Medžioklės įkarštis"';
-                    // TODO: No scatter mood and all ghosts leave instantly
-                case 9:
-                    return '"Užvartojusios Moncės"';
-                    // TODO: Ghosts get even faster for this level
 				default:
-					return 'Nieko naujo, perėjai geimą';
+					return MSG_SUCCESS;
 			}
 		}
 
@@ -1221,13 +1213,14 @@ function geronimo() {
 	        console.log("pacman died, "+this.lives+" lives left");
 	    	if (this.lives === 0) {
 					var score = game.score.score;
+					var level = game.level;
 					var title, msg;
-					if (score < 1000) {
+					if (level < 6) {
 						title = "Nepaėjo";
 						msg = "Bandyk dar kartą";
 					} else {
 						title = "Paėjo";
-						msg = "Būk pasiruošęs 2017-06-03 08:00.<br /><br />Apsirenk taip ir taip, turėk tą ir tą etc";
+						msg = MSG_SUCCESS;
 					}
 					game.showMessage(title,"Surinkai taškų: "+score+".<br /><br />" + msg);
 					game.gameOver = true;
